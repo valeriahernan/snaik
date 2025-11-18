@@ -19,6 +19,29 @@ document.getElementById("closePopup").onclick = () => {
   popup.style.display = "none";
 };
 
+// ===== key wasd =====
+document.addEventListener("keydown", function (event) {
+    const key = event.key.toLowerCase();
+
+    switch (key) {
+        case "w":
+            if (dy === 0) { dx = 0; dy = -1; }
+            break;
+        case "a":
+            if (dx === 0) { dx = -1; dy = 0; }
+            break;
+        case "s":
+            if (dy === 0) { dx = 0; dy = 1; }
+            break;
+        case "d":
+            if (dx === 0) { dx = 1; dy = 0; }
+            break;
+        default:
+            break;
+    }
+});
+
+
 // ===== BOTONES =====
 document.getElementById("btn-play").onclick = () => paused = false;
 document.getElementById("btn-pause").onclick = () => paused = true;
