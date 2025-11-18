@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Snake — Tamagotchi Style</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Snaik — Tamagotchi</title>
+
+<link rel="stylesheet" href="style.css">
+
 </head>
 <body>
 
@@ -13,23 +15,24 @@
     <canvas id="game" width="120" height="120"></canvas>
   </div>
 
-  <div id="buttons" style="gap:25px; margin-bottom:20px;">
-    <button class="btn" id="btn-play" style="background:#ff4b4b;"></button>
-    <button class="btn" id="btn-pause"></button>
-    <button class="btn" id="btn-about"></button>
+  <div id="buttons">
+    <button class="btn red" id="btn-play">PLAY</button>
+    <button class="btn" id="btn-pause">PAUSA</button>
+    <button class="btn" id="btn-about">ACERCA DE</button>
   </div>
 
   <div id="score">Puntaje: <span id="points">0</span></div>
 </div>
 
-<!-- Popup Tamagotchi -->
-<div id="tama-popup" class="popup-hidden">
-  <div class="popup-box">
-    <h3>CASITAGAMES.COM</h3>
-    <button id="close-popup" class="close-btn">Cerrar</button>
+<!-- POPUP -->
+<div id="popup">
+  <div id="popupContent">
+    <p>CASITAGAMES.COM</p>
+    <button id="closePopup">Cerrar</button>
   </div>
 </div>
 
 <script src="game.js"></script>
+
 </body>
 </html>
