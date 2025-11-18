@@ -204,6 +204,8 @@ requestAnimationFrame(loop);
 const popup=document.getElementById('tama-popup');
 document.getElementById('close-popup').onclick=()=> popup.style.display='none';
 
+// keyboard
+
 window.addEventListener('keydown',e=>{
   if(e.key==='ArrowUp') setDir(0,-1);
   if(e.key==='ArrowDown') setDir(0,1);
@@ -214,7 +216,7 @@ window.addEventListener('keydown',e=>{
 
   
 <!-- Popup Tamagotchi -->
-<div id="tama-popup" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.4); display:flex; justify-content:center; align-items:center;">
+<div id="tama-popup" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.4); justify-content:center; align-items:center; justify-content:center; align-items:center;">
   <div style="background:#fff; border:5px solid #5a57a8; border-radius:20px; padding:25px 30px; text-align:center; box-shadow:0 0 15px rgba(0,0,0,0.45); font-family:Arial;">
     <h3 style="margin:0; margin-bottom:10px; font-size:20px; color:#333;">CASITAGAMES.COM</h3>
     <button id="close-popup" style="margin-top:15px; padding:8px 18px; border:none; border-radius:10px; background:#5a57a8; color:white; font-size:14px; cursor:pointer; box-shadow:0 3px 0 #3c3a7b;">Cerrar</button>
