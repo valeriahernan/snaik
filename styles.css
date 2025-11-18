@@ -1,0 +1,64 @@
+:root{
+  --bg: #111;
+  --gb-body: #bfe2a6;
+  --gb-dark: #95b482;
+  --screen-bg: #9be39b;
+  --glass: #07140b;
+  --accent: #2b2b2b;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  background:radial-gradient(circle at 30% 10%, #222 0%, #000 60%);
+  font-family:'Press Start 2P', monospace, system-ui;
+  color:#e7f5e7;
+  display:flex;align-items:center;justify-content:center;padding:24px;
+}
+.wrap{max-width:800px;width:100%}
+header{text-align:center;margin-bottom:12px}
+header h1{font-size:14px;margin:0;color:#bfe2a6}
+
+.gameboy{
+  width:360px;margin:0 auto;background:linear-gradient(180deg,var(--gb-body),var(--gb-dark));
+  border-radius:18px;padding:18px;box-shadow:0 12px 30px rgba(0,0,0,0.6),inset 0 -6px 12px rgba(0,0,0,0.15);
+  display:flex;flex-direction:column;align-items:center;
+}
+.cartridge{width:100px;height:16px;background:#6a8a58;border-radius:4px;margin-bottom:10px}
+
+.screen-frame{background:var(--accent);padding:14px;border-radius:8px;box-shadow:inset 0 2px 0 rgba(255,255,255,0.06)}
+.screen{
+  width:240px;height:216px;display:flex;align-items:center;justify-content:center;position:relative;
+  background:linear-gradient(180deg,#123a14,#09260d);border-radius:6px;padding:8px;
+}
+
+canvas#game{
+  width:240px;height:216px;image-rendering:pixelated;
+  background:var(--screen-bg);
+  border:4px solid #163b16;
+  box-shadow:0 6px 0 rgba(0,0,0,0.35) inset,0 8px 30px rgba(0,0,0,0.6);
+}
+
+#hud{position:absolute;left:12px;top:10px;font-size:10px}
+#score{font-size:10px;padding:4px 6px;background:rgba(0,0,0,0.25);border-radius:4px}
+#message{position:absolute;left:0;right:0;bottom:16px;text-align:center;font-size:10px;background:rgba(0,0,0,0.18);padding:6px;border-radius:4px}
+.hidden{display:none}
+
+.controls{display:flex;gap:20px;margin-top:14px;align-items:center}
+.dpad{display:flex;flex-direction:column;gap:6px;align-items:center}
+.dpad .middle-row{display:flex;gap:8px}
+.btn{background:linear-gradient(180deg,#fff,#ddd);border:2px solid #333;padding:8px 10px;border-radius:6px;font-weight:bold;user-select:none}
+.btn:active{transform:translateY(1px)}
+.btn.action{width:42px;height:42px;border-radius:50%}
+
+.actions{display:flex;flex-direction:column;gap:8px}
+
+.credits{text-align:center;margin-top:10px;font-size:11px;color:#90b88f}
+
+@media (max-width:420px){
+  .gameboy{width:320px;padding:12px}
+  canvas#game{width:200px;height:180px}
+  .controls{gap:12px}
+}
+
+body{background-size:16px 16px}

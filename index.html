@@ -1,55 +1,56 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Snaik — Tamagotchi</title>
-
-<!-- Permite CSS inline sin romper GitHub Pages -->
-<meta http-equiv="Content-Security-Policy"
-      content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline';">
-
-<link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Snake Pixel - GameBoy</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <main class="wrap">
+    <header>
+      <h1>Snake Pixel — GameBoy</h1>
+    </header>
 
-<div id="tama-frame">
+    <section class="gameboy">
+      <div class="cartridge"></div>
 
-  <!-- PANTALLA -->
-  <div id="screen">
-    <!-- Snake -->
-    <canvas id="game" width="120" height="120"></canvas>
+      <div class="screen-frame">
+        <div class="screen">
+          <!-- pixel canvas inside the "glass" of GameBoy -->
+          <canvas id="game" width="160" height="144"></canvas>
 
-    <!-- Modo Mascota Alien -->
-    <div id="pet-mode">
-      <div id="alien">👽</div>
-      <div class="stats">
-        <p>Hambre: <span id="hunger">100</span></p>
-        <p>Energía: <span id="energy">100</span></p>
-        <p>Diversión: <span id="fun">100</span></p>
+          <!-- HUD inside the screen (score, msgs) -->
+          <div id="hud">
+            <div id="score">Puntaje: 0</div>
+            <div id="message" class="hidden">TOCA PARA INICIAR</div>
+          </div>
+        </div>
       </div>
-      <button id="btn-pet" class="btn small">Volver al Juego</button>
-    </div>
-  </div>
 
-  <!-- BOTONES -->
-  <div id="buttons">
-    <button class="btn red" id="btn-play">PLAY</button>
-    <button class="btn" id="btn-pause">PAUSA</button>
-    <button class="btn" id="btn-about">ACERCA DE</button>
-  </div>
+      <div class="controls">
+        <!-- D-pad -->
+        <div class="dpad">
+          <button class="btn up" data-dir="up">▲</button>
+          <div class="middle-row">
+            <button class="btn left" data-dir="left">◀</button>
+            <button class="btn right" data-dir="right">▶</button>
+          </div>
+          <button class="btn down" data-dir="down">▼</button>
+        </div>
 
-  <div id="score">Puntaje: <span id="points">0</span></div>
-</div>
+        <!-- Action buttons (A / B) just visual but A = pause / restart -->
+        <div class="actions">
+          <button id="btnA" class="btn action">A</button>
+          <button id="btnB" class="btn action">B</button>
+        </div>
+      </div>
 
-<!-- POPUP -->
-<div id="popup">
-  <div id="popupContent">
-    <p>CASITAGAMES.COM</p>
-    <button id="closePopup">Cerrar</button>
-  </div>
-</div>
+    </section>
 
-<script src="game.js"></script>
+    <footer class="credits">Sage + Valeria — Snake Pixel</footer>
+  </main>
+
+  <script src="game.js"></script>
 </body>
 </html>
