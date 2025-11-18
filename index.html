@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Snaik — Tamagotchi</title>
+<title>Snaik — Tamagotchi Alien</title>
 
 <link rel="stylesheet" href="style.css">
 
@@ -11,36 +11,16 @@
 <body>
 
 <div id="tama-frame">
-  
-  <button class="btn" id="btn-pet">MASCOTA</button>
-<button class="btn" id="btn-feed">COMER</button>
-<button class="btn" id="btn-playpet">JUGAR</button>
-<button class="btn" id="btn-clean">LIMPIAR</button>
-<button class="btn" id="btn-sleep">DORMIR</button>
-
-
   <div id="screen">
     <canvas id="game" width="120" height="120"></canvas>
+    <div id="pet-mode">
+      <img id="alien" src="alien.png" alt="alien">
+      <div id="stats">
+        <p>Hambre: <span id="hunger">100</span></p>
+        <p>Energía: <span id="energy">100</span></p>
+        <p>Felicidad: <span id="fun">100</span></p>
+      </div>
+    </div>
   </div>
 
-  <div id="buttons">
-    <button class="btn red" id="btn-play">PLAY</button>
-    <button class="btn" id="btn-pause">PAUSA</button>
-    <button class="btn" id="btn-about">ACERCA DE</button>
-  </div>
-
-  <div id="score">Puntaje: <span id="points">0</span></div>
-</div>
-
-<!-- POPUP -->
-<div id="popup">
-  <div id="popupContent">
-    <p>CASITAGAMES.COM</p>
-    <button id="closePopup">Cerrar</button>
-  </div>
-</div>
-
-<script src="game.js"></script>
-
-</body>
-</html>
+  <di
