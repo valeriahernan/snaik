@@ -16,6 +16,18 @@
 
 <div id="tama-frame">
   <div id="screen">
+    <div id="pet-mode" style="display:none; flex-direction:column; align-items:center;">
+  <div id="alien">👽</div>
+
+  <div class="stats">
+    <p>Hambre: <span id="hunger">100</span></p>
+    <p>Energía: <span id="energy">100</span></p>
+    <p>Diversión: <span id="fun">100</span></p>
+  </div>
+
+  <button id="btn-pet" class="btn">Modo Mascota</button>
+</div>
+
     <canvas id="game" width="120" height="120"></canvas>
     <div id="pet-mode">
       <img id="alien" src="alien.png" alt="alien">
