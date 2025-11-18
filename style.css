@@ -1,15 +1,15 @@
 :root{
-  --frame:#d6d3ff;
-  --border:#5a57a8;
-  --bg:#201f3a;
-  --snake:#9aff82;
-  --food:#ff6b6b;
+  --frame:#ffffff;
+  --border:#000000;
+  --bg:#000000;
+  --snake:#bbe741;
+  --food:#e054a1;
 }
 
 html,body{
   height:100%;
   margin:0;
-  background:#cfcdfb;
+  background-image:linear-gradient(135deg, #1bd6bd 0%, #ff24da 100%); 
   display:flex;
   justify-content:center;
   align-items:center;
