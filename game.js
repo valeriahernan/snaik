@@ -120,3 +120,18 @@ window.addEventListener("keydown", e => {
 });
 
 setup();
+
+const btnPlay = document.getElementById('btnPlay');
+
+btnPlay.addEventListener('click', () => {
+  startGame();
+  btnPlay.style.display = 'none';  // Ocultar botón cuando empieza
+});
+
+function startGame() {
+  if (!running) {
+    running = true;
+    gameOver = false;
+    msgEl.classList.add('hidden');
+  }
+}
