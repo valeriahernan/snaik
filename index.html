@@ -1,42 +1,55 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Snaik — Tamagotchi Alien</title>
+<title>Snaik — Tamagotchi</title>
 
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline';">
-
+<!-- Permite CSS inline sin romper GitHub Pages -->
+<meta http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline';">
 
 <link rel="stylesheet" href="style.css">
-
 </head>
 <body>
 
 <div id="tama-frame">
+
+  <!-- PANTALLA -->
   <div id="screen">
-    <div id="pet-mode" style="display:none; flex-direction:column; align-items:center;">
-  <div id="alien">👽</div>
-
-  <div class="stats">
-    <p>Hambre: <span id="hunger">100</span></p>
-    <p>Energía: <span id="energy">100</span></p>
-    <p>Diversión: <span id="fun">100</span></p>
-  </div>
-
-  <button id="btn-pet" class="btn">Modo Mascota</button>
-</div>
-
+    <!-- Snake -->
     <canvas id="game" width="120" height="120"></canvas>
+
+    <!-- Modo Mascota Alien -->
     <div id="pet-mode">
-      <img id="alien" src="alien.png" alt="alien">
-      <div id="stats">
+      <div id="alien">👽</div>
+      <div class="stats">
         <p>Hambre: <span id="hunger">100</span></p>
         <p>Energía: <span id="energy">100</span></p>
-        <p>Felicidad: <span id="fun">100</span></p>
+        <p>Diversión: <span id="fun">100</span></p>
       </div>
+      <button id="btn-pet" class="btn small">Volver al Juego</button>
     </div>
   </div>
 
-  <di
+  <!-- BOTONES -->
+  <div id="buttons">
+    <button class="btn red" id="btn-play">PLAY</button>
+    <button class="btn" id="btn-pause">PAUSA</button>
+    <button class="btn" id="btn-about">ACERCA DE</button>
+  </div>
+
+  <div id="score">Puntaje: <span id="points">0</span></div>
+</div>
+
+<!-- POPUP -->
+<div id="popup">
+  <div id="popupContent">
+    <p>CASITAGAMES.COM</p>
+    <button id="closePopup">Cerrar</button>
+  </div>
+</div>
+
+<script src="game.js"></script>
+</body>
+</html>
