@@ -29,6 +29,26 @@ html,body{
   padding-top:25px;
 }
 
+#buttons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.btn {
+  background: #5a57a8;
+  padding: 6px;
+  border: none;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn.red {
+  background: #ff6b6b;
+}
+
+
 #screen{
   background:var(--bg);
   width:260px;
